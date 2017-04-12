@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
         json::reader reader(read);
         reader.read(std::istream_iterator<char>(input), std::istream_iterator<char>());
     }
-    catch(json::exception e)
+    catch(json::exception &e)
     {
         std::cerr << e.what() << " at " << e.row() << ":" << e.column() << std::endl;
     }

@@ -57,7 +57,7 @@ public:
     using traits_type = Traits;
     using allocator_type = Allocator;
     using string_type = std::basic_string<char_type, traits_type, allocator_type>;
-    using callback_type =  std::function<void(json::item, const string_type &, std::size_t, std::size_t)>;
+    using callback_type = std::function<void(json::item, const string_type &, std::size_t, std::size_t)>;
 
 public:
     basic_reader(callback_type callback)
