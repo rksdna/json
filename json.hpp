@@ -76,7 +76,7 @@ public:
     template <typename InputIterator>
     void read(InputIterator first, InputIterator last)
     {
-        std::for_each(first, last, *this);
+        *this = std::for_each(first, last, *this);
     }
 
 private:
@@ -567,7 +567,7 @@ private:
     }
 
 private:
-    const callback_type m_callback;
+    callback_type m_callback;
     std::stack<token_state> m_token_state;
     char_state m_char_state = default_state;
     string_type m_data;
